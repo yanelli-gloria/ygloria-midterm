@@ -1,0 +1,27 @@
+<div class="modal">
+  <h2>Weekly Goals</h2>
+  <h3>9/24 - 9/30</h3>
+  <ul>
+    <li *ngFor="let goal of goals">
+      <input
+        type="text"
+        [(ngModel)]="goal.name"
+        placeholder="Enter your goal..."
+      />
+      <select [(ngModel)]="goal.tag">
+        <option *ngFor="let tag of tags" [value]="tag">{{ tag }}</option>
+      </select>
+    </li>
+    <li>
+      <input
+        type="text"
+        placeholder="Enter a new goal..."
+        [(ngModel)]="newGoalName"
+      />
+      <select [(ngModel)]="newGoalTag">
+        <option *ngFor="let tag of tags">{{ tag }}</option>
+      </select>
+    </li>
+  </ul>
+  <button (click)="saveGoals()">Save</button>
+</div>

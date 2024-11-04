@@ -1,0 +1,18 @@
+<div class="weekly-goals-container">
+  <h2>Weekly Goals</h2>
+  <h3><span class="date">9/24 - 9/30</span></h3>
+  <ul>
+    <li *ngFor="let goal of goals">
+      <input type="checkbox" [(ngModel)]="goal.completed" />
+      <div class="goal-text">
+        <span [class.completed]="goal.completed">{{ goal.name }}</span>
+        <span
+          class="tag"
+          [ngClass]="{ 'orange-tag': goal.tag === '#interview-technical' }"
+          >{{ goal.tag }}</span
+        >
+      </div>
+    </li>
+  </ul>
+  <div class="add-goal" (click)="addGoal()">+ Add a weekly goal</div>
+</div>

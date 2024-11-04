@@ -1,0 +1,76 @@
+.weekly-goals-container {
+  border: 1px solid #cfe8e4;
+  padding: 16px;
+  border-radius: 8px;
+  max-width: 300px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
+
+  h2 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: #333;
+  }
+
+  h3 {
+    font-size: 0.9rem;
+    color: #888;
+    font-weight: 400;
+    margin-bottom: 16px;
+
+    .date {
+      font-weight: 700;
+      color: #333;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+      color: #333;
+
+      input[type="checkbox"] {
+        margin-right: 8px;
+        margin-top: 2px;
+        accent-color: #6ec1b7;
+      }
+
+      .goal-text {
+        display: flex;
+        flex-direction: column;
+
+        .completed {
+          text-decoration: line-through;
+          color: #888;
+        }
+
+        .tag {
+          font-size: 0.85rem;
+          color: #6ec1b7;
+          padding-top: 2px;
+
+          &.orange-tag {
+            color: #f77a52;
+          }
+        }
+      }
+    }
+  }
+
+  .add-goal {
+    color: #6ec1b7;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 12px;
+    display: inline-block;
+  }
+}
